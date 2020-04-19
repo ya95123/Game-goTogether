@@ -1,0 +1,275 @@
+body {
+    background-image: url(/images/bg_cloud1920.svg);
+    width: 100vw;
+    height: 100vh;
+    font-family: "Microsoft YaHei";
+    cursor: url(/images/mouse/arrow-mouse50.png)7 7,auto;
+}
+
+body:active{
+    cursor: url(/images/mouse/arrow-mouse50.png)0 0,auto;
+}
+
+.red {
+    color: red;
+}
+
+.yellow {
+    color: rgb(253, 253, 154);
+}
+
+
+#top {
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    top: 0%;
+
+    /* background: #ffa; */
+    /* opacity: 0.3; */
+}
+
+#text-timeleft {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+
+    font-size: 4.7vh;
+    color:red;
+}
+
+#text-score {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    font-size: 4.7vh;
+    color: red;
+}
+
+#picExframe {
+    width: 30%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+
+    /* border: 2px solid red; */
+}
+
+#picExframe table {
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+}
+
+.exLeft {
+    width: calc(60% / 12);
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+.exCalc {
+    width: calc(40% / 12);
+    /* table 可以用vertical-align */
+    vertical-align: middle;
+    font-size: 1.7vh;
+    font-weight: bold;
+    /* color: red; */
+    /* border: 1px solid red; */
+}
+
+.picEx {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+#left {
+    width: 12%;
+    height: 50%;
+    position: absolute;
+    left: 2%;
+    top: 50%;
+    transform: translate(-2%,-50%);
+    position: relative;
+
+    font-size: 2.2vh;
+    font-weight: bold;
+    color: white;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 8px 8px 8px 8px;
+    display: none;
+}
+
+#btn-left{
+    width: 1.5%;
+
+    position: absolute;
+    left: 1%;
+    top: 50%;
+    transform: translate(-1%,-50%);
+}
+
+#btn-left:hover {
+    width: 1.8%;
+    /* filter: drop-shadow(2px 2px 2px #ffa); */
+}
+
+#left>div {
+    width: 90%;
+    height: 95%;
+    border-radius: 8px 8px 8px 8px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.sideP{
+    font-size: 3.2vh;
+    font-weight: bold;
+    color: white;
+    /* text-shadow:0px 0px 0px rgb(248, 83, 92); */
+
+    margin: 1.5vh 0 1.5vh 0;
+    text-align: center;
+}
+
+.rankFrame {
+    width: 90%;
+    margin: auto;
+    padding: 1.2vh 0px 1.2vh 0px;
+
+    /* border: 1px solid #000; */
+}
+
+.text-rankscore {
+    float: right;
+}
+
+#right {
+    width: 12%;
+    height: 45%;
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translate(-2%,-50%);
+
+    font-size: 2.2vh;
+    font-weight: bold;
+    color: white;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 8px 8px 8px 8px;
+    display: none;
+}
+
+#btn-right{
+    width: 1.5%;
+
+    position: absolute;
+    right: 1%;
+    top: 50%;
+    transform: translate(-1%,-50%);
+}
+
+#btn-right:hover {
+    width: 1.8%;
+    /* filter: drop-shadow(2px 2px 2px #ffa); */
+}
+
+
+#middle {
+    width: 70%;
+    height: 70%;
+    border-radius: 0.5rem;
+    /* border: 2px solid red; */
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#gameFrame {
+    width: 100%;
+    height: 100%;
+}
+
+#gameFrame tr td{
+    width: calc(100% / 7);
+    height: calc(100% /5);
+    position: relative;
+    /* border: 1px solid #000; */
+}
+
+#btn-start {
+    width: 5%;
+    height: 5%;
+    position: absolute;
+    left: 5%;
+    bottom: 15%;
+    transform: translate(-5%,-15%);
+    
+    font-size: 3.7vh;
+    text-align: center;
+    color: white;
+    background: rgb(228, 68, 77);
+    border: 3px solid rgb(255, 255, 255);
+    box-shadow: 2px 2px 2px #ccc;
+    border-radius: 12px;
+    cursor: pointer;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.hole{
+    width: 40%;
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    transform: translateX(-50%);
+}
+
+@keyframes hole {
+    0%{
+        bottom: 0%;
+        opacity: 0;
+    }
+    50%{
+        bottom: 70%;
+        opacity: 1;
+    }
+    100%{
+        bottom: 0%;
+        opacity: 0;
+    }
+}
+
+@keyframes net {
+    0%{
+        z-index: 1;
+        bottom: 0%;
+        opacity: 0;
+    }
+    50%{
+        z-index: 1;
+        transform: scale(5);
+        bottom: 70%;
+        opacity: 1;
+    }
+    100%{
+        z-index: 1;
+        transform: scale(5);
+        bottom: 0%;
+        opacity: 0;
+    }
+}

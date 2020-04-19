@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>天堂見 We will see in Heaven</title>
+  <!-- css reset -->
+  <link rel="stylesheet" href="/css/reset.css">
+  <!-- 連結 css 樣式 -->
+  <link rel="stylesheet" href="/css/goTogether.css">
+</head>
+
+<body>
+  <!-- TODO 2初始圖片及UI修改、1CSS圖片動畫(設定難易度用秒數更改)、3alert、提醒樣式、4Stop鍵 -->
+  <audio id="bgMusic" src="/musics/AI_2.mp3" autoplay loop></audio>
+
+  <div id="top">
+    <p id="text-timeleft">30 s</p>
+    <p id="text-score">Score：0 分</p>
+    <div id="picExframe">
+      <table>
+        <tr>
+          <td class="exLeft" rowspan="2"><img class="picEx" src="/images/fish.png" alt="fish">
+          </td>
+          <td class="exCalc red">+1分</td>
+          <td class="exLeft" rowspan="2"><img class="picEx" src="/images/sad-people.png" alt="sad-people">
+          </td>
+          <td class="exCalc red">+3分</td>
+          <td class="exLeft" rowspan="2"><img class="picEx" src="/images/sushi.png" alt="sushi"></td>
+          <td class="exCalc red">+0分</td>
+          <td class="exLeft" rowspan="2"><img class="picEx" src="/images/egg.png" alt="egg"></td>
+          <td class="exCalc red">+7分</td>
+          <td class="exLeft" rowspan="2"><img class="picEx" src="/images/red-evil.png" alt="red-evil"></td>
+          <td class="exCalc">-1分</td>
+          <td class="exLeft" rowspan="2"><img class="picEx" src="/images/yellow-evil.png" alt="yellow-evil">
+          </td>
+          <td class="exCalc">-2分</td>
+        </tr>
+        <tr>
+          <td class="exCalc red">+1秒</td>
+          <td class="exCalc red">+0秒</td>
+          <td class="exCalc red">+2秒</td>
+          <td class="exCalc red">+0秒</td>
+          <td class="exCalc">-0秒</td>
+          <td class="exCalc">-1秒</td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+
+  <img id="btn-left" src="/images/white-wings-left.png" alt="">
+  <div id="left">
+    <div>
+      <p class="sideP">Top9 排行榜</p>
+      <div class="rankFrame">
+        <span class="text-ranknum red">1</span>&ensp;
+        <span class="text-rankplayer red">nobody</span>
+        <span class="text-rankscore red">0</span>
+      </div>
+      <div class="rankFrame">
+        <span class="text-ranknum yellow">2</span>&ensp;
+        <span class="text-rankplayer yellow">nobody</span>
+        <span class="text-rankscore yellow">0</span>
+      </div>
+      <div class="rankFrame">
+        <span class="text-ranknum">3</span>&ensp;
+        <span class="text-rankplayer">nobody</span>
+        <span class="text-rankscore">0</span>
+      </div>
+      <div class="rankFrame">
+        <span class="text-ranknum">4</span>&ensp;
+        <span class="text-rankplayer">nobody</span>
+        <span class="text-rankscore">0</span>
+      </div>
+      <div class="rankFrame">
+        <span class="text-ranknum">5</span>&ensp;
+        <span class="text-rankplayer">nobody</span>
+        <span class="text-rankscore">0</span>
+      </div>
+      <div class="rankFrame">
+        <span class="text-ranknum">6</span>&ensp;
+        <span class="text-rankplayer">nobody</span>
+        <span class="text-rankscore">0</span>
+      </div>
+      <div class="rankFrame">
+        <span class="text-ranknum">7</span>&ensp;
+        <span class="text-rankplayer">nobody</span>
+        <span class="text-rankscore">0</span>
+      </div>
+      <div class="rankFrame">
+        <span class="text-ranknum">8</span>&ensp;
+        <span class="text-rankplayer">nobody</span>
+        <span class="text-rankscore">0</span>
+      </div>
+      <div class="rankFrame">
+        <span class="text-ranknum">9</span>&ensp;
+        <span class="text-rankplayer">nobody</span>
+        <span class="text-rankscore">0</span>
+      </div>
+    </div>
+  </div>
+
+  <img id="btn-right" src="/images/white-wings-right.png" alt="">
+  <div id="right">
+    <p class="sideP">工具</p>
+  </div>
+
+  <div id="middle">
+    <table id="gameFrame" border="1">
+      <tr>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+      </tr>
+      <tr>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+      </tr>
+      <tr>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+      </tr>
+      <tr>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+      </tr>
+      <tr>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+        <td><img src="" alt="" class="hole"></td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="btn-start">Go</div>
+
+  <script src="/js/jquery-3.5.0.min.js"></script>
+  <script>
+    const bgMusic = document.getElementById("bgMusic")
+    // top 剩餘時間、當前分數
+    const textTime = document.getElementById("text-timeleft");
+    const textScore = document.getElementById("text-score");
+
+    // middle 遊戲畫面、地洞
+    const gameFrame = document.getElementById("gameFrame");
+    const holes = document.getElementsByClassName("hole");
+    const btnStart = document.getElementById("btn-start");
+
+    // left
+    // const textRankNum = document.getElementsByClassName("text-ranknum");
+    const textRankPlayer = document.getElementsByClassName("text-rankplayer");
+    const textRankScore = document.getElementsByClassName("text-rankscore");
+
+    // 隨機數 function
+    const rand = (min, max) => {
+      return Math.round(Math.random() * (max - min) + min);
+    }
+
+    // 左右側點擊收合(為了方便先用JQuery)
+    $("#btn-left").click(function () {
+      $("#left").slideToggle(1000);
+    });
+    $("#btn-right").click(function () {
+      $("#right").slideToggle(1000);
+    })
+
+    // 圖片插入區
+    let imgFish = "/images/fish.png";
+    let imgSad = "/images/sad-people.png";
+    let imgSushi = "/images/sushi.png";
+    let imgEgg = "/images/egg.png";
+    let imgRedEvil = "/images/red-evil.png";
+    let imgYellowEvil = "/images/yellow-evil.png";
+    // 圖片出現產生不同機率用
+    let imgp = 0;
+    // const imgs = [imgFish, imgSad, imgSushi, imgEgg, imgRedEvil, imgYellowEvil];
+
+    // 音效區
+    const bubble = new Audio; bubble.src = "/musics/bubble.mp3";
+    const correct = new Audio; correct.src = "/musics/correct.mp3";
+    const eat = new Audio; eat.src = "/musics/eat.mp3";
+    const hope = new Audio; hope.src = "/musics/hope.mp3";
+    const warning = new Audio; warning.src = "/musics/warning.mp3";
+    const evilLaugh = new Audio; evilLaugh.src = "/musics/evil-laugh.mp3";
+    const translate = new Audio; translate.src = "/musics/translate.mp3";
+    const surprise = new Audio; surprise.src = "/musics/surprise.mp3";
+
+    // 音量區
+    bgMusic.volume = 0.5;
+    bubble.volume = 0.5;
+    correct.volume = 0.5;
+    eat.volume = 0.5;
+    hope.volume = 0.5;
+    warning.volume = 0.5;
+    evilLaugh.volume = 0.5;
+    translate.volume = 0.5;
+    surprise.volume = 0.5;
+
+    // 遊戲變數基本設定區
+    let score = 0;
+    let inGame = false;
+    let timeLeft = 30;
+    let timer = 0;
+    let gameRound = 0;
+    let randJump = 0;
+    let jumps = [];
+    let rank = [{ name: 'nobody', score: 0 }, { name: 'nobody', score: 0 }, { name: 'nobody', score: 0 }, { name: 'nobody', score: 0 }, { name: 'nobody', score: 0 }, { name: 'nobody', score: 0 }, { name: 'nobody', score: 0 }, { name: 'nobody', score: 0 }, { name: 'nobody', score: 0 }];
+    let storage = [JSON.parse(localStorage.getItem("rank0")), JSON.parse(localStorage.getItem("rank1")), JSON.parse(localStorage.getItem("rank2")), JSON.parse(localStorage.getItem("rank3")), JSON.parse(localStorage.getItem("rank4")), JSON.parse(localStorage.getItem("rank5")), JSON.parse(localStorage.getItem("rank6")), JSON.parse(localStorage.getItem("rank7")), JSON.parse(localStorage.getItem("rank8"))];
+    for (let i = 0; i <= 8; i++) {
+      if (storage[i] != null) {
+        rank[i].score = storage[i].score;
+        rank[i].name = storage[i].name;
+        textRankScore[i].innerText = rank[i].score;
+        textRankPlayer[i].innerText = rank[i].name;
+      }
+    }
+    console.log(storage);
+
+    // 點擊"開始"
+    btnStart.onclick = () => {
+      // 讓btnStart 消失
+      btnStart.style.display = "none";
+      // 開始遊戲
+      inGame = true;
+      // 重置分數、起始時間
+      score = 0;
+      textScore.innerText = `Score：${score} 分`;
+      timeLeft = 30;
+      textTime.innerText = `${timeLeft} s`;
+
+      gameRound = setInterval(game, 2500);
+      timer = setInterval(timeDes, 1000);
+      game();
+    }
+
+    // 遊戲進行
+    const game = () => {
+      // 清空 hole 圖片、動畫
+      for (let hole of holes) {
+        hole.src = "";
+        hole.style.animation = "";
+      }
+      // 重置 jumps隨機格子陣列、imgp圖片機率
+      jumps = [];
+      imgp = 0;
+
+      // 隨機選7格跳圖片
+      for (let i = 0; i < 7; i++) {
+        // 隨機不重複
+        randJump = rand(0, 34);
+        while (jumps.includes(randJump)) {
+          randJump = rand(0, 34);
+        }
+        jumps.push(randJump);
+
+        // 已被選的隨機格子，再按"機率"選圖片跳出 (從1開始是為了要讓機率均等1~100個)
+        imgp = rand(1, 100);
+        // console.log(imgp);
+        if (imgp > 0 && imgp <= 30) {
+          // 魚 30%
+          holes[jumps[i]].src = imgFish;
+          holes[jumps[i]].style.animation = "hole 2.5s infinite";
+        }
+        else if (imgp > 30 && imgp <= 60) {
+          // 難過 30%
+          holes[jumps[i]].src = imgSad;
+          holes[jumps[i]].style.animation = "hole 2.5s infinite";
+        }
+        else if (imgp > 60 && imgp <= 67) {
+          // 壽司 7%
+          holes[jumps[i]].src = imgSushi;
+          holes[jumps[i]].style.animation = "hole 2.5s infinite";
+        }
+        else if (imgp > 67 && imgp <= 70) {
+          // 彩蛋 3%
+          holes[jumps[i]].src = imgEgg;
+          holes[jumps[i]].style.animation = "hole 2.5s infinite";
+        }
+        else if (imgp > 70 && imgp <= 85) {
+          // 紅惡 15%
+          holes[jumps[i]].src = imgRedEvil;
+          holes[jumps[i]].style.animation = "hole 2.5s infinite";
+        }
+        else if (imgp > 85 && imgp <= 100) {
+          // 黃惡 15%
+          holes[jumps[i]].src = imgYellowEvil;
+          holes[jumps[i]].style.animation = "hole 2.5s infinite";
+        }
+      }
+    }
+
+    // 時間線控制
+    const timeDes = () => {
+      // 遞減時間
+      timeLeft--;
+      textTime.innerText = `${timeLeft} s`;
+
+      // 遊戲結束時
+      if (timeLeft <= 0) {
+        inGame = false;
+        clearInterval(timer);
+        clearInterval(gameRound);
+        // 清空圖片、動畫
+        for (let hole of holes) {
+          hole.src = "";
+          hole.style.animation = "";
+        }
+
+        // setTimeout 為了讓秒數跑到 0s
+        setTimeout(() => {
+          // TODO 把alert設定改好看 用div跳
+          alert(`你獲得了 ${score} 分`);
+
+          // TODO 進入排行榜(分數大於第9名才會進榜，同分不會進)
+          // 進榜對話框
+          if (storage[8] == null || score > rank[8].score) {
+            // TODO why音效輸入完才會出現?
+            hope.play();
+            const input = prompt("太棒了 ～ 恭喜你進入前 Top 9 ！🎏\n請寫下你的名字，因你是尊貴的勇者 🤴👸\n(中文5字以內，英文7字以內)");
+            // 有留名字才會加進排行榜
+            if (input != null || input.trim() !== '') {
+              // 排行比較
+              for (let i = 0; i <= 8; i++) {
+                if (score > rank[i].score) {
+                  // 先將低於此值的人排名下降
+                  for (let j = 7; j >= i; j--) {
+                    // 下個排名值 = 原本名值
+                    rank[j + 1].score = rank[j].score;
+                    rank[j + 1].name = rank[j].name;
+                    textRankScore[j + 1].innerText = rank[j + 1].score;
+                    textRankPlayer[j + 1].innerText = rank[j + 1].name;
+                    localStorage.setItem(`rank${j + 1}`, JSON.stringify(rank[j + 1]));
+                  }
+
+                  // 將本次值放進該排行
+                  rank[i].score = score;
+                  rank[i].name = input;
+                  textRankScore[i].innerText = rank[i].score;
+                  textRankPlayer[i].innerText = rank[i].name;
+                  localStorage.setItem(`rank${i}`, JSON.stringify(rank[i]));
+                  break;
+                }
+                else if (score == rank[i].score) {
+                  // 先將低於此值的人排名下降
+                  for (let k = 7; k >= i; k--) {
+                    // 下個排名值 = 原本名值
+                    rank[k + 1].score = rank[k].score;
+                    rank[k + 1].name = rank[k].name;
+                    textRankScore[k + 1].innerText = rank[k + 1].score;
+                    textRankPlayer[k + 1].innerText = rank[k + 1].name;
+                    localStorage.setItem(`rank${k + 1}`, JSON.stringify(rank[k + 1]));
+                  }
+
+                  // 將本次值放進該排行
+                  rank[i].score = score;
+                  rank[i].name = input;
+                  textRankScore[i].innerText = rank[i].score;
+                  textRankPlayer[i].innerText = rank[i].name;
+                  localStorage.setItem(`rank${i}`, JSON.stringify(rank[i]));
+                  break;
+                }
+              }
+
+            }
+          }
+          else if (score == rank[8].score) {
+            translate.play();
+            alert("尊貴的勇士，你雖與第9名同分，但尚還不能進榜，請繼續堅持呀 ~ 突破自己💪");
+          }
+          else if (score < rank[8].score) {
+            surprise.play();
+            alert("加油啊~讓我們努力奔著目標向前 🔥");
+          }
+
+          // 讓 btn 出現，原本css設flex，所以這裡也要調回flex，不然會跑版
+          btnStart.style.display = "flex";
+
+          // 讓剩餘時間調回來
+          timeLeft = 30;
+          textTime.innerText = `${timeLeft} s`;
+
+          // TODO 回到初始圖片 (html也要加初始圖片gif or svg)
+        }, 80);
+      }
+    }
+
+    // 遊戲點擊事件&分數、時間
+    // TODO 被點擊時換圖片、音效
+    for (let hole of holes) {
+      hole.onmousedown = () => {
+        // 魚 +1分 +1秒
+        if (inGame && hole.src.includes(imgFish)) {
+          hole.src = "/images/translate/fish-love.png";
+          bubble.play();
+          score++;
+          textScore.innerText = `Score：${score} 分`;
+          timeLeft++;
+          textTime.innerText = `${timeLeft} s`;
+        }
+        // 難過 +3分
+        else if (inGame && hole.src.includes(imgSad)) {
+          hole.src = "/images/translate/love-people.png";
+          correct.play();
+          score += 3;
+          textScore.innerText = `Score：${score} 分`;
+        }
+        // 壽司 +2秒
+        else if (inGame && hole.src.includes(imgSushi)) {
+          hole.src = "/images/translate/sushi-eatten.png";
+          eat.play();
+          timeLeft += 2;
+          textTime.innerText = `${timeLeft} s`;
+        }
+        // 彩蛋 +5分
+        else if (inGame && hole.src.includes(imgEgg)) {
+          hole.src = "/images/translate/egg-love.png";
+          hope.play();
+          score += 7;
+          textScore.innerText = `Score：${score} 分`;
+        }
+        // 紅惡 -1分
+        else if (inGame && hole.src.includes(imgRedEvil)) {
+          // TODO 網子變大的動畫、設定秒數、還原
+          hole.src = "/images/translate/net.png";
+          hole.style.animation = "net 2.5s";
+          warning.play();
+          score--;
+          textScore.innerText = `Score：${score} 分`;
+        }
+        // 黃惡 -2分 -1秒
+        else if (inGame && hole.src.includes(imgYellowEvil)) {
+          hole.src = "/images/translate/yellow-evil-black-love.png";
+          evilLaugh.play();
+          score -= 2;
+          textScore.innerText = `Score：${score} 分`;
+          timeLeft--;
+          textTime.innerText = `${timeLeft} s`;
+        }
+      }
+    }
+
+  // TODO 遊戲中鍵盤可以使用 ｓ 當作滑鼠點擊
+  // document.onkeydown = (event) => {
+  //     const key = event.key;
+  //     if (key == "s") {
+  //         const screen = document.getElementsByTagName("body");
+  //         screen.onmousedown();
+  //     }
+  // }
+  </script>
+
+</body>
+
+</html>
