@@ -6,14 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>天堂見 We will see in Heaven</title>
   <!-- css reset -->
-  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="css/reset.css">
   <!-- 連結 css 樣式 -->
-  <link rel="stylesheet" href="/css/goTogether.css">
+  <link rel="stylesheet" href="css/goTogether.css">
 </head>
 
 <body>
-  <!-- TODO 2初始圖片及UI修改、1CSS圖片動畫(設定難易度用秒數更改)、3alert、提醒樣式、4Stop鍵 -->
-  <audio id="bgMusic" src="/musics/AI_2.mp3" autoplay loop></audio>
+  <!-- TODO 2初始圖片及UI修改、1CSS圖片動畫(設定難易度用秒數更改)、3alert、提醒樣式、4Stop鍵 *音樂播放按鈕-->
+  <audio id="bgMusic" src="musics/AI_2.mp3" autoplay loop></audio>
+  <!-- <bgsoud id="bgMusic" src="musics/AI_2.mp3" autostart=true loop=-1></bgsoud> -->
+  <!-- <embed id="bgMusic" src="musics/AI_2.mp3" loop="true" autostart="true" hidden="true"> -->
 
   <div id="top">
     <p id="text-timeleft">30 s</p>
@@ -21,19 +23,19 @@
     <div id="picExframe">
       <table>
         <tr>
-          <td class="exLeft" rowspan="2"><img class="picEx" src="/images/fish.png" alt="fish">
+          <td class="exLeft" rowspan="2"><img class="picEx" src="images/fish.png" alt="fish">
           </td>
           <td class="exCalc red">+1分</td>
-          <td class="exLeft" rowspan="2"><img class="picEx" src="/images/sad-people.png" alt="sad-people">
+          <td class="exLeft" rowspan="2"><img class="picEx" src="images/sad-people.png" alt="sad-people">
           </td>
           <td class="exCalc red">+3分</td>
-          <td class="exLeft" rowspan="2"><img class="picEx" src="/images/sushi.png" alt="sushi"></td>
+          <td class="exLeft" rowspan="2"><img class="picEx" src="images/sushi.png" alt="sushi"></td>
           <td class="exCalc red">+0分</td>
-          <td class="exLeft" rowspan="2"><img class="picEx" src="/images/egg.png" alt="egg"></td>
+          <td class="exLeft" rowspan="2"><img class="picEx" src="images/egg.png" alt="egg"></td>
           <td class="exCalc red">+7分</td>
-          <td class="exLeft" rowspan="2"><img class="picEx" src="/images/red-evil.png" alt="red-evil"></td>
+          <td class="exLeft" rowspan="2"><img class="picEx" src="images/red-evil.png" alt="red-evil"></td>
           <td class="exCalc">-1分</td>
-          <td class="exLeft" rowspan="2"><img class="picEx" src="/images/yellow-evil.png" alt="yellow-evil">
+          <td class="exLeft" rowspan="2"><img class="picEx" src="images/yellow-evil.png" alt="yellow-evil">
           </td>
           <td class="exCalc">-2分</td>
         </tr>
@@ -50,7 +52,7 @@
 
   </div>
 
-  <img id="btn-left" src="/images/white-wings-left.png" alt="">
+  <img id="btn-left" src="images/white-wings-left.png" alt="">
   <div id="left">
     <div>
       <p class="sideP">Top9 排行榜</p>
@@ -102,7 +104,7 @@
     </div>
   </div>
 
-  <img id="btn-right" src="/images/white-wings-right.png" alt="">
+  <img id="btn-right" src="images/white-wings-right.png" alt="">
   <div id="right">
     <p class="sideP">工具</p>
   </div>
@@ -159,9 +161,10 @@
 
   <div id="btn-start">Go</div>
 
-  <script src="/js/jquery-3.5.0.min.js"></script>
+  <script src="js/jquery-3.5.0.min.js"></script>
   <script>
-    const bgMusic = document.getElementById("bgMusic")
+    // const bgMusic = document.getElementById("bgMusic");
+    // bgMusic.muted = true;
     // top 剩餘時間、當前分數
     const textTime = document.getElementById("text-timeleft");
     const textScore = document.getElementById("text-score");
@@ -190,25 +193,30 @@
     })
 
     // 圖片插入區
-    let imgFish = "/images/fish.png";
-    let imgSad = "/images/sad-people.png";
-    let imgSushi = "/images/sushi.png";
-    let imgEgg = "/images/egg.png";
-    let imgRedEvil = "/images/red-evil.png";
-    let imgYellowEvil = "/images/yellow-evil.png";
+    let imgFish = "images/fish.png";
+    let imgSad = "images/sad-people.png";
+    let imgSushi = "images/sushi.png";
+    let imgEgg = "images/egg.png";
+    let imgRedEvil = "images/red-evil.png";
+    let imgYellowEvil = "images/yellow-evil.png";
     // 圖片出現產生不同機率用
     let imgp = 0;
     // const imgs = [imgFish, imgSad, imgSushi, imgEgg, imgRedEvil, imgYellowEvil];
 
     // 音效區
-    const bubble = new Audio; bubble.src = "/musics/bubble.mp3";
-    const correct = new Audio; correct.src = "/musics/correct.mp3";
-    const eat = new Audio; eat.src = "/musics/eat.mp3";
-    const hope = new Audio; hope.src = "/musics/hope.mp3";
-    const warning = new Audio; warning.src = "/musics/warning.mp3";
-    const evilLaugh = new Audio; evilLaugh.src = "/musics/evil-laugh.mp3";
-    const translate = new Audio; translate.src = "/musics/translate.mp3";
-    const surprise = new Audio; surprise.src = "/musics/surprise.mp3";
+    const bubble = new Audio; bubble.src = "musics/bubble.mp3";
+    const correct = new Audio; correct.src = "musics/correct.mp3";
+    const eat = new Audio; eat.src = "musics/eat.mp3";
+    const hope = new Audio; hope.src = "musics/hope.mp3";
+    const warning = new Audio; warning.src = "musics/warning.mp3";
+    const evilLaugh = new Audio; evilLaugh.src = "musics/evil-laugh.mp3";
+    const translate = new Audio; translate.src = "musics/translate.mp3";
+    const surprise = new Audio; surprise.src = "musics/surprise.mp3";
+    // const bgMusic = new Audio; bgMusic.src = "musics/AI_2.mp3";
+    // const bgMusic = new Audio("musics/AI_2.mp3");
+    // window.loding = () => {
+    //   bgMusic.play();
+    // }
 
     // 音量區
     bgMusic.volume = 0.5;
@@ -415,7 +423,7 @@
       hole.onmousedown = () => {
         // 魚 +1分 +1秒
         if (inGame && hole.src.includes(imgFish)) {
-          hole.src = "/images/translate/fish-love.png";
+          hole.src = "images/translate/fish-love.png";
           bubble.play();
           score++;
           textScore.innerText = `Score：${score} 分`;
@@ -424,21 +432,21 @@
         }
         // 難過 +3分
         else if (inGame && hole.src.includes(imgSad)) {
-          hole.src = "/images/translate/love-people.png";
+          hole.src = "images/translate/love-people.png";
           correct.play();
           score += 3;
           textScore.innerText = `Score：${score} 分`;
         }
         // 壽司 +2秒
         else if (inGame && hole.src.includes(imgSushi)) {
-          hole.src = "/images/translate/sushi-eatten.png";
+          hole.src = "images/translate/sushi-eatten.png";
           eat.play();
           timeLeft += 2;
           textTime.innerText = `${timeLeft} s`;
         }
         // 彩蛋 +5分
         else if (inGame && hole.src.includes(imgEgg)) {
-          hole.src = "/images/translate/egg-love.png";
+          hole.src = "images/translate/egg-love.png";
           hope.play();
           score += 7;
           textScore.innerText = `Score：${score} 分`;
@@ -446,7 +454,7 @@
         // 紅惡 -1分
         else if (inGame && hole.src.includes(imgRedEvil)) {
           // TODO 網子變大的動畫、設定秒數、還原
-          hole.src = "/images/translate/net.png";
+          hole.src = "images/translate/net.png";
           hole.style.animation = "net 2.5s";
           warning.play();
           score--;
@@ -454,7 +462,7 @@
         }
         // 黃惡 -2分 -1秒
         else if (inGame && hole.src.includes(imgYellowEvil)) {
-          hole.src = "/images/translate/yellow-evil-black-love.png";
+          hole.src = "images/translate/yellow-evil-black-love.png";
           evilLaugh.play();
           score -= 2;
           textScore.innerText = `Score：${score} 分`;

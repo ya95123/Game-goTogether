@@ -1,13 +1,13 @@
 body {
-    background-image: url(/images/bg_cloud1920.svg);
+    background-image: url(../images/bg_cloud1920.svg);
     width: 100vw;
     height: 100vh;
     font-family: "Microsoft YaHei";
-    cursor: url(/images/mouse/arrow-mouse50.png)7 7,auto;
+    cursor: url(../images/mouse/arrow-mouse50.png)7 7,auto;
 }
 
 body:active{
-    cursor: url(/images/mouse/arrow-mouse50.png)0 0,auto;
+    cursor: url(../images/mouse/arrow-mouse50.png)0 0,auto;
 }
 
 .red {
