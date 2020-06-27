@@ -1,4 +1,5 @@
-網址：https://ya95123.github.io/goTogether/
+小遊戲！
+網址：https://ya95123.github.io/game-goTogether/
 
 ### 打地鼠需的基本設定
 **==HTML==**
