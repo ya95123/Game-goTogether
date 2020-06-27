@@ -1,4 +1,4 @@
-網址：ya95123.github.io/gotogether/
+網址：https://ya95123.github.io/goTogether/
 
 ### 打地鼠需的基本設定
 **==HTML==**
