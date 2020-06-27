@@ -1,4 +1,4 @@
-js-da-di-shu-ya95123
+網址：ya95123.github.io/gotogether/
 
 ### 打地鼠需的基本設定
 **==HTML==**
